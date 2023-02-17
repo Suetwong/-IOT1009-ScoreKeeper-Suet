@@ -13,8 +13,8 @@
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="47dp" >
 
-        <!-- Team names, scores and a switch to toggle scoring team -->
 
+        <!-- The title -->
         <TextView
             android:id="@+id/score_keeper_title"
             android:layout_width="wrap_content"
@@ -24,6 +24,7 @@
             tools:layout_editor_absoluteX="107dp"
             tools:layout_editor_absoluteY="59dp" />
 
+        <!-- Team names and scores -->
         <TextView
             android:id="@+id/team1_name"
             android:layout_width="68dp"
@@ -59,7 +60,7 @@
             tools:layout_editor_absoluteX="226dp"
             tools:layout_editor_absoluteY="126dp" />
 
-        <!-- A switch to toggle add or deduct score, and 2 textviews to show "Add" and "Deduct" -->
+        <!-- A switch to toggle the team being scored.-->
         <Switch
             android:id="@+id/scoring_team_switch"
             android:layout_width="wrap_content"
@@ -68,6 +69,7 @@
             tools:layout_editor_absoluteX="156dp"
             tools:layout_editor_absoluteY="340dp" />
 
+        <!-- A switch to toggle add or deduct score, and 2 textviews to show "Add" and "Deduct" -->
         <TextView
             android:id="@+id/deduct_score"
             android:layout_width="wrap_content"
@@ -83,7 +85,6 @@
             tools:layout_editor_absoluteX="170dp"
             tools:layout_editor_absoluteY="419dp" />
 
-        <!-- 3 radio buttons for points -->
         <TextView
             android:id="@+id/add_score"
             android:layout_width="wrap_content"
@@ -92,6 +93,7 @@
             tools:layout_editor_absoluteX="254dp"
             tools:layout_editor_absoluteY="419dp" />
 
+        <!-- 3 radio buttons for points -->
         <RadioButton
             android:id="@+id/one_point_button"
             android:layout_width="wrap_content"
