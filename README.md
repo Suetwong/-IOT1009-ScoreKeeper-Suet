@@ -1,3 +1,6 @@
+## Student Name: Suet Kam Wong
+## Studnet Number: A00247363
+
 # Basketball score keeper
 ⬆Design a layout for basketball 🏀 score keeper.⬇
  
