@@ -13,7 +13,7 @@
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="47dp" >
 
-        <!-- The title -->
+        <!-- Title -->
         <TextView
             android:id="@+id/score_keeper_title"
             android:layout_width="wrap_content"
