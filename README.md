@@ -1,18 +1,9 @@
-# Project Title
-One Paragraph of the project description
+# Basketball score keeper
+⬆Design a layout for basketball 🏀 score keeper.⬇
  
-# Built With
-Contributor Covenant - Used for the Code of Conduct
-Creative Commons - Used to choose the license
-
-# Contributing
-Please read CONTRIBUTING.md for details on our code of conduct, and the process for submitting pull requests to us.
-
-# Versioning
-We use Semantic Versioning for versioning. For the versions available, see the tags on this repository.
-
 # License
-This project is licensed under the CC0 1.0 Universal Creative Commons License - see the LICENSE.md file for details
+This project is unlicensed.
 
 # Acknowledgments
-Hat tip to anyone whose code is used
+It is just the preliminary version that none of button work.
+Looking forward to coming class after study weeks to build up more features! ⭐
