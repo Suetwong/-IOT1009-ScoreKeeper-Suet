@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -25,58 +24,44 @@
                 android:textSize="35dp"
                 android:gravity="center"
                 />
-
         </LinearLayout>
 
         <!-- Team scores -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:orientation="vertical"
+            android:orientation="horizontal"
+            android:weightSum="5"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:gravity="bottom"
-            >
-            <LinearLayout
-                android:layout_width="match_parent"
+            android:layout_marginRight="10dp">
+
+            <TextView
+                android:id="@+id/team1_score"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:weightSum="5">
-                >
+                android:layout_weight="2"
+                android:textSize="70dp"
+                android:text="0"
+                android:inputType="number"
+                android:gravity="center"/>
 
-                <TextView
-                    android:id="@+id/team1_score"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="2"
-                    android:ems="10"
-                    android:textSize="70dp"
-                    android:text="0"
-                    android:gravity="center"
-                    />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="70dp"
+                android:text=":"
+                android:gravity="center"/>
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:textSize="70dp"
-                    android:text=":"
-                    android:gravity="center"
-                    />
-
-                <TextView
-                    android:id="@+id/team2_score"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="2"
-                    android:ems="10"
-                    android:inputType="number"
-                    android:textSize="70dp"
-                    android:text="0"
-                    android:gravity="center"
-                    />
-
-            </LinearLayout>
+            <TextView
+                android:id="@+id/team2_score"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:inputType="number"
+                android:textSize="70dp"
+                android:text="0"
+                android:gravity="center"/>
         </LinearLayout>
 
         <!-- Team names -->
@@ -86,29 +71,27 @@
             android:orientation="horizontal"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:weightSum="5"
-            >
+            android:weightSum="5">
 
+            <!-- Editable field for team 1 name -->
             <EditText
                 android:id="@+id/team1_name"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:text="Team 1"
                 android:layout_weight="2"
-                android:gravity="center"
-                 />
+                android:gravity="center"/>
 
-            <!-- A switch to toggle the team being scored.-->
+            <!-- A switch to toggle the team being scored -->
             <Switch
                 android:id="@+id/scoring_team_switch"
                 android:layout_width="40dp"
                 android:layout_height="match_parent"
                 android:text="Scoring"
                 android:layout_weight="1"
-                android:layout_gravity="center"
-                 />
+                android:layout_gravity="center"/>
 
-
+            <!-- Editable field for team 1 name -->
             <EditText
                 android:id="@+id/team2_name"
                 android:layout_width="0dp"
@@ -118,7 +101,7 @@
                 android:gravity="center"/>
         </LinearLayout>
 
-        <!-- Team names -->
+        <!-- A switch to toggle the team being scored.-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="20dp"
@@ -127,8 +110,7 @@
             android:layout_marginRight="10dp"
             android:weightSum="5"
             android:gravity="center"
-            android:layout_margin="10dp"
-            >
+            android:layout_margin="10dp">
 
             <TextView
                 android:id="@+id/deduct"
@@ -136,17 +118,14 @@
                 android:layout_height="match_parent"
                 android:text="Deduct"
                 android:layout_weight="2"
-                android:gravity="right"
+                android:gravity="right"/>
 
-                />
-
-            <!-- A switch to toggle the team being scored.-->
             <Switch
                 android:id="@+id/add_or_deduct"
                 android:layout_width="20dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:gravity="center" />
+                android:gravity="center"/>
 
             <TextView
                 android:id="@+id/add"
@@ -170,32 +149,20 @@
                     android:id="@+id/one_point_button"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:text="1 point"
-                    />
+                    android:text="1 point"/>
 
                 <RadioButton
                     android:id="@+id/two_points_button"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:text="2 Points"
-                    />
+                    android:text="2 Points"/>
 
                 <RadioButton
                     android:id="@+id/three_points_button"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:text="3 points"
-                    />
+                    android:text="3 points"/>
+
             </RadioGroup>
-
-
-
-
         </LinearLayout>
-
-
-
-
-
-
 </ScrollView>
