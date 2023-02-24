@@ -1,122 +1,198 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
         tools:context=".MainActivity"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="47dp" >
-
+        >
         <!-- Title -->
-        <TextView
-            android:id="@+id/score_keeper_title"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+            <TextView
+                android:id="@+id/score_keeper_title"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:text="Basketball Score Keeper"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+
+        <!-- Team scores -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="bottom"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="5">
+                >
+
+                <TextView
+                    android:id="@+id/team1_score"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:ems="10"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text=":"
+                    android:gravity="center"
+                    />
+
+                <TextView
+                    android:id="@+id/team2_score"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:ems="10"
+                    android:inputType="number"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Team names -->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:autoText="false"
-            android:text="Basketball Score Keeper"
-            tools:layout_editor_absoluteX="107dp"
-            tools:layout_editor_absoluteY="59dp" />
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:weightSum="5"
+            >
 
-        <!-- Team names and scores -->
-        <TextView
-            android:id="@+id/team1_name"
-            android:layout_width="68dp"
-            android:layout_height="44dp"
-            android:background="#F6F6F6"
-            android:text="Team 1"
-            tools:layout_editor_absoluteX="73dp"
-            tools:layout_editor_absoluteY="323dp" />
+            <EditText
+                android:id="@+id/team1_name"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="Team 1"
+                android:layout_weight="2"
+                android:gravity="center"
+                 />
 
-        <EditText
-            android:id="@+id/team1_score"
-            android:layout_width="133dp"
-            android:layout_height="167dp"
-            android:ems="10"
-            android:inputType="number"
-            tools:layout_editor_absoluteX="63dp"
-            tools:layout_editor_absoluteY="126dp" />
+            <!-- A switch to toggle the team being scored.-->
+            <Switch
+                android:id="@+id/scoring_team_switch"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:text="Scoring"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                 />
 
-        <TextView
-            android:id="@+id/team2_name"
-            android:layout_width="81dp"
-            android:layout_height="41dp"
-            android:text="Team 2"
-            tools:layout_editor_absoluteX="260dp"
-            tools:layout_editor_absoluteY="326dp" />
 
-        <EditText
-            android:id="@+id/team2_score"
-            android:layout_width="125dp"
-            android:layout_height="165dp"
-            android:ems="10"
-            android:inputType="number"
-            tools:layout_editor_absoluteX="226dp"
-            tools:layout_editor_absoluteY="126dp" />
+            <EditText
+                android:id="@+id/team2_name"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="Team 2"
+                android:layout_weight="2"
+                android:gravity="center"/>
+        </LinearLayout>
 
-        <!-- A switch to toggle the team being scored.-->
-        <Switch
-            android:id="@+id/scoring_team_switch"
-            android:layout_width="wrap_content"
+        <!-- Team names -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:weightSum="5"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            >
+
+            <TextView
+                android:id="@+id/deduct"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="Deduct"
+                android:layout_weight="2"
+                android:gravity="right"
+
+                />
+
+            <!-- A switch to toggle the team being scored.-->
+            <Switch
+                android:id="@+id/add_or_deduct"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+
+                android:layout_weight="1"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/add"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="Add"
+                android:layout_weight="2"
+                android:gravity="left"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Scoring "
-            tools:layout_editor_absoluteX="156dp"
-            tools:layout_editor_absoluteY="340dp" />
+            android:orientation="horizontal"
+            android:layout_margin="20dp">
+            <!-- Team names -->
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:checkedButton="@id/one_point_button">
 
-        <!-- A switch to toggle add or deduct score, and 2 textviews to show "Add" and "Deduct" -->
-        <TextView
-            android:id="@+id/deduct_score"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Deduct score"
-            tools:layout_editor_absoluteX="58dp"
-            tools:layout_editor_absoluteY="419dp" />
+                <!-- 3 radio buttons for points -->
+                <RadioButton
+                    android:id="@+id/one_point_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1 point"
+                    />
 
-        <Switch
-            android:id="@+id/add_or_deduct_switch"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:layout_editor_absoluteX="170dp"
-            tools:layout_editor_absoluteY="419dp" />
+                <RadioButton
+                    android:id="@+id/two_points_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2 Points"
+                    />
 
-        <TextView
-            android:id="@+id/add_score"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Add score"
-            tools:layout_editor_absoluteX="254dp"
-            tools:layout_editor_absoluteY="419dp" />
+                <RadioButton
+                    android:id="@+id/three_points_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3 points"
+                    />
+            </RadioGroup>
 
-        <!-- 3 radio buttons for points -->
-        <RadioButton
-            android:id="@+id/one_point_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="1 point"
-            tools:layout_editor_absoluteX="148dp"
-            tools:layout_editor_absoluteY="483dp" />
+        </LinearLayout>
 
-        <RadioButton
-            android:id="@+id/two_points_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="2 Points"
-            tools:layout_editor_absoluteX="148dp"
-            tools:layout_editor_absoluteY="531dp" />
 
-        <RadioButton
-            android:id="@+id/three_points_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="3 points"
-            tools:layout_editor_absoluteX="149dp"
-            tools:layout_editor_absoluteY="579dp" />
+        </LinearLayout>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</ScrollView>
