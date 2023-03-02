@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
@@ -7,4 +8,25 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <!--    used the color picker -->
+    <!--    https://imagecolorpicker.com/-->
+    <color name="pink_95white">#fdf8fb</color>
+    <color name="pink_90white">#f9e9f2</color>
+    <color name="pink_30white">#d266a5</color>
+    <color name="pink_main">#be257e</color>
+    <color name="pink_20dark">#981e65</color>
+    <color name="pink_50dark">#5f133f</color>
+    <color name="gray">#aea3a9</color>
+    <color name="pink_dark90">#6f516c</color>
+    <color name="pink_dark80">#825f7e</color>
+    <color name="pinkgray_light10">#eee2ed</color>
+    <color name="pink_bg">#f8f3f8</color>
+    <color name="pink_bgtext">#a79ea6</color>
+    <color name="pink_primary">#d6cbd5</color>
+    <color name="pink_var">#B987b4</color>
+
+
+
+
+
 </resources>

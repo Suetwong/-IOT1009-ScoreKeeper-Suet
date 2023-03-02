@@ -2,15 +2,39 @@
     <!-- Base application theme. -->
     <style name="Theme.ScoreKeeper" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorPrimary">#eee2ed</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/black</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondary">@color/pink_90white</item>
         <item name="colorSecondaryVariant">@color/teal_200</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+    </style>
+
+    <!--  Dark mode-->
+    <!-- Color setting for the title if dark mode on -->
+    <style name = "Title">
+        <item name="android:background">@color/pink_dark90</item>
+        <item name="android:textColor">@color/pinkgray_light10</item>
+    </style>
+
+    <!-- Color setting for the main background if dark mode on -->
+    <style name = "Main_background">
+        <item name="android:background">@color/pink_dark80</item>
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <!-- Color setting for the buttons if dark mode on -->
+    <style name = "Button">
+        <item name="android:background">@color/pink_95white</item>
+        <item name="android:textViewStyle">@style/NewText</item>
+    </style>
+
+    <!-- Color setting for the radio buttons if dark mode on -->
+    <style name = "Radio_Button" parent="Main_background">
+        <item name="android:textColor">@color/pinkgray_light10</item>
     </style>
 </resources>
