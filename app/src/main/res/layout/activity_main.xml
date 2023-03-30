@@ -4,28 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    style="@style/Main_background">
+    tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        >
+        tools:context=".MainActivity">
 
         <!-- Title -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="100dp">
-
             <TextView
                 android:id="@+id/score_keeper_title"
-                style="@style/Title"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:gravity="center"
                 android:text="Basketball Score Keeper"
-                android:textSize="30sp" />
+                android:textSize="35dp"
+                android:gravity="center"
+                />
         </LinearLayout>
 
         <!-- Team scores -->
@@ -44,7 +42,7 @@
                 android:layout_weight="2"
                 android:textSize="70dp"
                 android:text="0"
-
+                android:inputType="number"
                 android:gravity="center"/>
 
             <TextView
@@ -60,10 +58,10 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="2"
+                android:inputType="number"
                 android:textSize="70dp"
                 android:text="0"
                 android:gravity="center"/>
-
         </LinearLayout>
 
         <!-- Team names -->
@@ -73,27 +71,25 @@
             android:orientation="horizontal"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:weightSum="5"
-            android:gravity="center">
+            android:weightSum="5">
 
             <!-- Editable field for team 1 name -->
-
-            <!-- A switch to toggle the team being scored -->
             <EditText
                 android:id="@+id/team1_name"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_marginRight="10dp"
-                android:layout_weight="2"
-                android:gravity="center"
                 android:text="Team 1"
-                android:inputType="text"/>
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_weight="2"
                 android:gravity="center"/>
+
+            <!-- A switch to toggle the team being scored -->
+            <Switch
+                android:id="@+id/scoring_team_switch"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:text="Scoring"
+                android:layout_weight="1"
+                android:layout_gravity="center"/>
 
             <!-- Editable field for team 1 name -->
             <EditText
@@ -102,101 +98,71 @@
                 android:layout_height="match_parent"
                 android:text="Team 2"
                 android:layout_weight="2"
-                android:gravity="center"
-                android:layout_marginLeft="10dp"
-                android:inputType="text"
-                />
-
+                android:gravity="center"/>
         </LinearLayout>
 
-
-
-        <!-- A radio groups for points -->
-        <RadioGroup
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:checkedButton="@id/one_point_button"
-            android:gravity="center"
-            android:id="@+id/points_group"
-
-
-            >
-
-            <!-- 3 radio buttons for points -->
-            <RadioButton
-                android:id="@+id/one_point_button"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:text="1 point"
-                style="@style/Radio_Button"
-                />
-
-            <RadioButton
-                android:id="@+id/two_points_button"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:text="2 Points"
-                style="@style/Radio_Button"
-                />
-
-            <RadioButton
-                android:id="@+id/three_points_button"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:text="3 points"
-                style="@style/Radio_Button"
-               />
-
-        </RadioGroup>
-
-        <!-- Buttons to add or deduct.-->
+        <!-- A switch to toggle the team being scored.-->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_height="20dp"
+            android:orientation="horizontal"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
+            android:weightSum="5"
             android:gravity="center"
-            android:orientation="horizontal"
-            android:weightSum="5">
+            android:layout_margin="10dp">
 
-            <Button
-                android:id="@+id/deduct_point_button"
-                android:layout_width="0px"
-                android:layout_height="wrap_content"
+            <TextView
+                android:id="@+id/deduct"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="Deduct"
+                android:layout_weight="2"
+                android:gravity="right"/>
+
+            <Switch
+                android:id="@+id/add_or_deduct"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                app:icon="@drawable/ic_baseline_remove_24"
-                app:iconGravity="textStart"
-                app:iconPadding="-3dp"
-                android:layout_marginRight="15dp"
-                android:background="@drawable/border"
-                >
-            </Button>
+                android:gravity="center"/>
 
-            <ToggleButton
-                android:id="@+id/score_team_button"
-                android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/add"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="Add"
+                android:layout_weight="2"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <!-- A radio groups for points -->
+            <RadioGroup
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textOn="Team 1"
-                android:textOff="Team 2"
-                android:checked="true"
-                android:background="@drawable/border"/>
+                android:gravity="center"
+                android:checkedButton="@id/one_point_button"
+                android:layout_margin="20dp">
 
-            <Button
-                android:id="@+id/add_point_button"
-                android:layout_width="0px"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                app:icon="@drawable/ic_baseline_add_24"
-                app:iconGravity="textStart"
-                app:iconPadding="-3dp"
-                android:layout_marginLeft="15dp"
-                android:background="@drawable/border"
-                ></Button>
-            </LinearLayout>
+                <!-- 3 radio buttons for points -->
+                <RadioButton
+                    android:id="@+id/one_point_button"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="1 point"/>
 
+                <RadioButton
+                    android:id="@+id/two_points_button"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="2 Points"/>
 
+                <RadioButton
+                    android:id="@+id/three_points_button"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="3 points"/>
+
+            </RadioGroup>
         </LinearLayout>
 </ScrollView>
