@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="NewText">
+        <item name="android:gravity">right</item>
+        <item name="android:textColor">@color/pink_50dark</item>
+        <item name="backgroundColor">@color/pink_30white</item>
+    </style>
+    <style name="Button_Text" parent="NewText">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#a77aa2</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <!--Light mode-->
+    <!-- Color setting for the title if light mode on -->
+    <style name = "Title">
+        <item name="android:background">@color/pinkgray_light10</item>
+        <item name="android:textColor">@color/pink_dark80</item>
+    </style>
+
+    <!-- Color setting for main background color if light mode on -->
+    <style name = "Main_background">
+        <item name="android:background">@color/pink_bg</item>
+        <item name="android:textColor">@color/pink_bgtext</item>
+    </style>
+
+    <!-- Color setting for the buttons-->
+    <style name = "Button">
+        <item name="android:background">@color/pink_95white</item>
+        <item name="android:textViewStyle">@style/NewText</item>
+    </style>
+
+    <!-- Color setting for the radio buttons-->
+    <style name = "Radio_Button" parent="Main_background">
+        <item name="android:textColor">@color/pink_dark80</item>
+    </style>
+
+</resources>
