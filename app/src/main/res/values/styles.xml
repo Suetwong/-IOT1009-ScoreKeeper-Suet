@@ -5,6 +5,7 @@
         <item name="android:textColor">@color/pink_50dark</item>
         <item name="backgroundColor">@color/pink_30white</item>
     </style>
+
     <style name="Button_Text" parent="NewText">
         <item name="android:textSize">18sp</item>
         <item name="android:textStyle">bold</item>
