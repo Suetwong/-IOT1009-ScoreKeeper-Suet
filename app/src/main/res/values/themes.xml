@@ -12,5 +12,10 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="android:actionOverflowMenuStyle">@style/myMenuItems</item>
+    </style>
+    <style name="myMenuItems">
+        <item name="backgroundColor">@color/white</item>
+        <item name="android:textColor">@color/black</item>
     </style>
 </resources>
