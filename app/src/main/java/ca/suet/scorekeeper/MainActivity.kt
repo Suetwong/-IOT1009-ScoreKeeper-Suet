@@ -75,6 +75,7 @@ class MainActivity :
         binding.team2Name.setText(sharedPrefs.getString("team_2_name", "team2"))
         team1.score = sharedPrefs.getString("team_1_score","0").toString().toInt()
         team2.score = sharedPrefs.getString("team_2_score","0").toString().toInt()
+        binding.pointsGroup.check(sharedPrefs.getInt("spinner_point",0))
         updateDisplay()
     }
 
@@ -89,6 +90,10 @@ class MainActivity :
             editor.putString("team_2_name", binding.team2Name.text.toString())
             editor.putString("team_1_score", binding.team1Score.text.toString())
             editor.putString("team_2_score", binding.team2Score.text.toString())
+            // store the spinner point in the editor
+            editor.putInt("spinner_point", binding.pointsGroup.checkedRadioButtonId)
+            editor.putBoolean("scoring_team", binding.scoreTeamButton.isChecked)
+            Log.i("onClick","scoring_team: "+binding.scoreTeamButton.isChecked)
         }
         // otherwise, the data is not going to be stored
         else{
@@ -147,6 +152,9 @@ class MainActivity :
 
         binding.team1Score.setText(team1.score.toString())
         binding.team2Score.setText(team2.score.toString())
+
+
+
     }
 
 }
